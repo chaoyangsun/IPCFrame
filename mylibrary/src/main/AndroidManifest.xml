@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.scy.component.mylibrary">
+
+    <application>
+        <activity android:name=".MainActivity"></activity>
+        <service android:name="com.scy.component.mylibrary.IPCService$IPCService0" android:process=":gps"
+            android:exported="true"/>
+    </application>
+
+</manifest>
