@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/IPCFrame.iml" filepath="$PROJECT_DIR$/IPCFrame.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_client/test_client.iml" filepath="$PROJECT_DIR$/test_client/test_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test_service/test_service.iml" filepath="$PROJECT_DIR$/test_service/test_service.iml" />
     </modules>
   </component>
 </project>

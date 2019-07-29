@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void showLocation(View view) {
         //代理对象
         ILocationManager location = IPC.getInstanceWithName(IPCService.IPCService0.class, ILocationManager.class, "getDefault");
+
         Toast.makeText(this, "当前位置:" + location.getLocation(), Toast.LENGTH_LONG).show();
     }
 }

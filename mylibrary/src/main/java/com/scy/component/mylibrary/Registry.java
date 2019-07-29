@@ -2,6 +2,7 @@ package com.scy.component.mylibrary;
 
 import android.annotation.TargetApi;
 import android.os.Build;
+import android.util.Log;
 
 import com.scy.component.mylibrary.annotation.ServiceId;
 import com.scy.component.mylibrary.model.Parameters;
@@ -24,7 +25,6 @@ public class Registry {
      * 服务表
      */
     private ConcurrentHashMap<String, Class<?>> mServices = new ConcurrentHashMap<>();
-
     /**
      * 方法表
      */
@@ -94,6 +94,7 @@ public class Registry {
                 sb.append(",").append(parameterTypes[i].getName());
             }
             sb.append(")");
+            Log.e("--==", sb.toString());
             methods.put(sb.toString(), method);
         }
     }
@@ -110,7 +111,7 @@ public class Registry {
 //
 //    }
 
-    public Method getMethod2(Class<?> clazz, String methodName, Parameters[] parameters) {
+    public Method getMethod(Class<?> clazz, String methodName, Parameters[] parameters) {
         Map<String, Method> methods = mMethods.get(clazz);
 
         StringBuilder sb = new StringBuilder();

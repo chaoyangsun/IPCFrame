@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.scy.component.mylibrary.model.Parameters;
@@ -34,7 +35,7 @@ public abstract class IPCService extends Service {
                 Object[] objects = restoreParameters(parameters);
                 //从方法表中获得 对应的Method对象
                 String methodName = request.getMethodName();
-                Method method = Registry.getInstance().getMethod2(instanceClass, methodName, (Parameters[]) objects);
+                Method method = Registry.getInstance().getMethod(instanceClass, methodName, (Parameters[]) objects);
                 Response response;
                 //客户端的请求类型
                 switch (request.getType()){
@@ -49,6 +50,7 @@ public abstract class IPCService extends Service {
                             e.printStackTrace();
                             response = new Response(null, false);
                         }
+                        Log.e("--==", "get_instance");
                         break;
                     //普通方法
                     case Request.GET_METHOD:
@@ -61,6 +63,7 @@ public abstract class IPCService extends Service {
                             e.printStackTrace();
                             response = new Response(null, false);
                         }
+                        Log.e("--==", "get_method");
                         break;
                     default:
                         response = new Response(null, false);

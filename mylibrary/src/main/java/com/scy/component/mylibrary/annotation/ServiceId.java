@@ -12,7 +12,6 @@ import java.lang.annotation.Target;
 
 
 @Retention(RetentionPolicy.RUNTIME) //给反射用
-
 @Target(ElementType.TYPE)
 public @interface ServiceId {
     String value();

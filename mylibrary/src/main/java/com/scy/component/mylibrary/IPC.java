@@ -40,7 +40,6 @@ public class IPC {
      */
     public static void connect(Context context, String packageName,
                                Class<? extends IPCService> service) {
-        Log.e("--==", "bind0");
         Channel.getInstance().bind(context.getApplicationContext(), packageName, service);
     }
 
