@@ -22,6 +22,8 @@
             android:process=":gps"
             android:enabled="true"
             android:exported="true"></service>
+        <service android:name="com.scy.component.mylibrary.IPCService$IPCService0" android:process=":gps"
+            android:exported="true"/>
     </application>
 
 </manifest>
