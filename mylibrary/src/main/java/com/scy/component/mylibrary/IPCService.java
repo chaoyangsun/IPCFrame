@@ -16,7 +16,6 @@ import java.util.Arrays;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-@RequiresApi(api = Build.VERSION_CODES.N)
 public abstract class IPCService extends Service {
     static Gson gson = new Gson();
 
